@@ -1,42 +1,73 @@
 # Technical-writing-assessment-
 Technical writing internship assessment
 
-Smart Stock Alert System
-Repository Overview
-The Smart Stock Alert System is a tool that helps businesses keep track of their inventory. It sends an alert whenever the quantity of a product becomes low. This helps businesses restock products before they run out.
-This documentation explains the purpose of the system, how to set it up, and how to contribute to the project.
-Business Value
-The Smart Stock Alert System helps businesses by:
-Monitoring inventory levels.
-Sending low-stock notifications.
-Reducing the chances of stock shortages.
-Improving inventory management.
-Getting Started
-Prerequisites
-Before setting up the project, make sure you have:
-Git
-Node.js
-npm
-A code editor such as Visual Studio Code
-Installation
-Clone the repository.
-Open the project folder.
-Install the required dependencies.
-Start the application.
-Contributing
-Anyone who wants to contribute should:
-Create a new branch.
-Make the necessary changes.
-Review the work.
-Commit the changes with a clear message.
-Submit a Pull Request.
-Documentation Standards
-To keep the documentation easy to read:
-Use clear headings.
-Write in simple language.
-Check for spelling and grammar mistakes.
-Keep the information organized.
-Conclusion
-The Smart Stock Alert System helps businesses manage their inventory more effectively by providing automatic low-stock alerts. This documentation gives new users a simple guide to getting started with the project
 
+
+API Reference
+
+Endpoint
+
+"POST /api/v1/alerts/config"
+
+Description
+
+The "POST /api/v1/alerts/config" endpoint creates a new stock alert configuration. It allows businesses to receive notifications when a product's inventory falls below a specified threshold.
+
+---
+
+Authentication
+
+This endpoint requires Bearer Token Authentication.
+
+Include the following header in your request:
+
+Authorization: Bearer YOUR_ACCESS_TOKEN
+
+---
+
+Request Parameters
+
+Parameter| Type| Required| Description
+"product_id"| String| Yes| Unique identifier of the product.
+"threshold_limit"| Integer| Yes| Minimum stock quantity before an alert is triggered.
+"notification_email"| String| Yes| Email address that will receive the alert notification.
+"is_active"| Boolean| Yes| Enables ("true") or disables ("false") the alert configuration.
+
+---
+
+Example Request
+
+POST /api/v1/alerts/config
+Authorization: Bearer YOUR_ACCESS_TOKEN
+Content-Type: application/json
+
+{
+  "product_id": "PRD001",
+  "threshold_limit": 20,
+  "notification_email": "manager@example.com",
+  "is_active": true
+}
+
+---
+
+Success Response (201 Created)
+
+{
+  "message": "Alert configuration created successfully.",
+  "status": 201
+}
+
+---
+
+Error Response (400 Bad Request)
+
+{
+  "error": "Invalid request. Please check the required fields."
+}
+
+---
+
+Conclusion
+
+The "POST /api/v1/alerts/config" endpoint enables users to create stock alert configurations by submitting the required information. Ensure that all required fields are provided and that a valid Bearer Token is included before sending the request.
 
