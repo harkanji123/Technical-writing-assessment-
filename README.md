@@ -1,153 +1,151 @@
-# Technical-writing-assessment-
-Technical writing internship assessment
+# Smart Stock Alert System
 
-# User Guide
+## Overview
 
-## Smart Stock Alert System
+The Smart Stock Alert System is a backend microservice that monitors product inventory levels and automatically sends notifications when stock falls below a predefined threshold. It helps businesses manage inventory efficiently by reducing manual monitoring and enabling timely restocking.
 
-Welcome to the Smart Stock Alert System.
-
-This guide explains how to create your first low-stock alert using the web dashboard. No technical experience is required.
+The service supports secure REST API integrations and webhook notifications, allowing seamless communication with external inventory management systems and e-commerce platforms.
 
 ---
 
-## Before You Begin
+## Business Value
 
-Make sure you have:
+This system provides several benefits:
 
-- An active account
-- Access to the Smart Stock Alert dashboard
-- At least one product already added to your inventory
-
-> **Tip:** If you cannot log in, contact your system administrator.
-
----
-
-# Step 1: Sign In
-
-1. Open the Smart Stock Alert dashboard.
-2. Enter your email address.
-3. Enter your password.
-4. Click **Sign In**.
-
-After signing in, you will be taken to the Dashboard.
+- Reduces stock shortages.
+- Automates inventory monitoring.
+- Improves operational efficiency.
+- Supports faster business decisions.
+- Minimizes manual inventory checks.
+- Integrates easily with third-party applications.
 
 ---
 
-# Step 2: Open the Alerts Page
+## Features
 
-From the left navigation menu:
-
-1. Click **Alerts**.
-2. Select **Create Alert**.
-
-The alert setup page will open.
-
----
-
-# Step 3: Select a Product
-
-Choose the product you want to monitor.
-
-Example:
-
-- Rice (50kg)
-- Cooking Oil
-- Sugar
-
-Click the product name to continue.
+- Real-time inventory monitoring
+- Configurable stock thresholds
+- Automatic low-stock alerts
+- REST API support
+- Webhook notifications
+- Secure Bearer Token authentication
 
 ---
 
-# Step 4: Set the Low Stock Limit
+# Getting Started
 
-Enter the minimum stock quantity.
+## Prerequisites
 
-Example:
+Before installing the project, ensure you have the following:
 
-If you enter **20**, the system will send an alert whenever the product quantity drops below **20 units**.
+- Git
+- Node.js (Version 18 or later)
+- npm
+- Visual Studio Code
 
 ---
 
-# Step 5: Enter Your Email Address
+## Installation
 
-Provide the email address that should receive notifications.
+Clone the repository:
 
-Example:
-
-```
-manager@example.com
+```bash
+git clone https://github.com/your-username/smart-stock-alert-system.git
 ```
 
-You can use any valid email address that you check regularly.
+Navigate into the project directory:
+
+```bash
+cd smart-stock-alert-system
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
 
 ---
 
-# Step 6: Enable Notifications
+# Project Structure
 
-Locate the **Alert Status** option.
-
-Turn it **On** to activate the alert.
-
-If it is turned off, notifications will not be sent.
-
----
-
-# Step 7: Save the Alert
-
-Click the **Save Alert** button.
-
-A confirmation message will appear showing that your alert has been created successfully.
+```
+smart-stock-alert-system/
+│
+├── README.md
+│
+└── docs/
+    ├── api-reference.md
+    └── user-guide.md
+```
 
 ---
 
-# Managing Your Alerts
+# Contributing
 
-To update an existing alert:
+Contributions are welcome.
 
-1. Open the **Alerts** page.
-2. Select the alert you want to edit.
+1. Fork the repository.
+
+2. Create a new branch.
+
+```bash
+git checkout -b feature/new-feature
+```
+
 3. Make your changes.
-4. Click **Save**.
+
+4. Commit your changes.
+
+```bash
+git commit -m "Add new feature"
+```
+
+5. Push your branch.
+
+```bash
+git push origin feature/new-feature
+```
+
+6. Submit a Pull Request.
 
 ---
 
-# Disabling an Alert
+# Documentation Standards
 
-If you no longer need an alert:
+To maintain consistency:
 
-1. Go to **Alerts**.
-2. Open the alert.
-3. Turn **Alert Status** off.
-4. Save your changes.
-
-The alert will remain in your account but will no longer send notifications.
-
----
-
-# Troubleshooting
-
-## I am not receiving email notifications.
-
-Check the following:
-
-- Your email address is correct.
-- The alert is enabled.
-- The product stock has actually gone below the limit.
-- Check your Spam or Junk folder.
+- Write documentation in Markdown.
+- Use clear and concise language.
+- Organize content with headings.
+- Include examples where necessary.
+- Maintain consistent formatting.
+- Review grammar before submitting.
 
 ---
 
-## I cannot create an alert.
+# Technologies
 
-Make sure:
-
-- A product has been added to your inventory.
-- All required fields have been completed.
+- Node.js
+- REST API
+- Git
+- GitHub
+- Markdown
 
 ---
 
-## Need Help?
+# License
 
-If you continue to experience issues, contact your system administrator or your company's support team.
+This repository was created for the Taotech Solutions Technical Writer Internship Assessment.
 
+---
+
+# Author
+
+Prepared by **Faruq Abideen**.
